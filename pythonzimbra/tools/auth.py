@@ -2,7 +2,7 @@
 authentication token """
 
 from datetime import datetime
-from urllib2 import HTTPError
+from urllib.error import HTTPError
 from pythonzimbra.request_json import RequestJson
 
 from pythonzimbra.request_xml import RequestXml

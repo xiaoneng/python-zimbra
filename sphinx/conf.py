@@ -40,8 +40,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Python-Zimbra'
-copyright = u'2013, Dennis Ploeger <develop@dieploegers.de>'
+project = 'Python-Zimbra'
+copyright = '2013, Dennis Ploeger <develop@dieploegers.de>'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -183,8 +183,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Python-Zimbra.tex', u'Python-Zimbra Documentation',
-   u'Dennis Ploeger \\textless{}develop@dieploegers.de\\textgreater{}', 'manual'),
+  ('index', 'Python-Zimbra.tex', 'Python-Zimbra Documentation',
+   'Dennis Ploeger \\textless{}develop@dieploegers.de\\textgreater{}', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -213,8 +213,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'python-zimbra', u'Python-Zimbra Documentation',
-     [u'Dennis Ploeger <develop@dieploegers.de>'], 1)
+    ('index', 'python-zimbra', 'Python-Zimbra Documentation',
+     ['Dennis Ploeger <develop@dieploegers.de>'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -227,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Python-Zimbra', u'Python-Zimbra Documentation',
-   u'Dennis Ploeger <develop@dieploegers.de>', 'Python-Zimbra', 'One line description of project.',
+  ('index', 'Python-Zimbra', 'Python-Zimbra Documentation',
+   'Dennis Ploeger <develop@dieploegers.de>', 'Python-Zimbra', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -245,10 +245,10 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Python-Zimbra'
-epub_author = u'Dennis Ploeger <develop@dieploegers.de>'
-epub_publisher = u'Dennis Ploeger <develop@dieploegers.de>'
-epub_copyright = u'2013, Dennis Ploeger <develop@dieploegers.de>'
+epub_title = 'Python-Zimbra'
+epub_author = 'Dennis Ploeger <develop@dieploegers.de>'
+epub_publisher = 'Dennis Ploeger <develop@dieploegers.de>'
+epub_copyright = '2013, Dennis Ploeger <develop@dieploegers.de>'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

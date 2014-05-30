@@ -2,7 +2,7 @@
 
 import xml.dom.minidom
 from pythonzimbra.tools import xmlserializer
-from request import Request
+from .request import Request
 
 
 class RequestXml(Request):
@@ -68,7 +68,7 @@ class RequestXml(Request):
 
         super(RequestXml, self).set_context_params(params)
 
-        for key, value in params.iteritems():
+        for key, value in params.items():
 
             tmp_node = self.request_doc.createElement(key)
 

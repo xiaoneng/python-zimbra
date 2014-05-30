@@ -2,7 +2,7 @@
 
 from xml.dom import minidom
 from pythonzimbra.tools.xmlserializer import dom_to_dict
-from response import Response
+from .response import Response
 
 
 class ResponseXml(Response):
@@ -63,7 +63,7 @@ class ResponseXml(Response):
 
             ret_dict['idToName'][request_id] = child.tagName
 
-            if child.tagName not in ret_dict['nameToId'].keys():
+            if child.tagName not in list(ret_dict['nameToId'].keys()):
 
                 ret_dict['nameToId'][child.tagName] = []
 

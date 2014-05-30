@@ -45,7 +45,7 @@ class Request(object):
         :param params: A Dict containing context parameters.
         """
 
-        for key, value in params.iteritems():
+        for key, value in params.items():
 
             if key not in self.valid_context_params:
 
@@ -130,7 +130,7 @@ class Request(object):
         pass
 
     def __str__(self):
-        return unicode(self).encode('utf-8')
+        return str(self).encode('utf-8')
 
     def __unicode__(self):
         return self.get_request()

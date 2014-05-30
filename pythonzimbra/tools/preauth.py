@@ -24,7 +24,7 @@ def create_preauth(byval, key, by='name', expires=0, timestamp=None):
         timestamp = int(datetime.now().strftime("%s")) * 1000
 
     pak = hmac.new(
-        key,
+        key.encode(),
         '%s|%s|%s|%s' % (
             byval,
             by,

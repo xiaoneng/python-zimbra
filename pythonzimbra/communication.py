@@ -1,6 +1,6 @@
 """ Zimbra communication handler. """
 
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 
 
 class Communication(object):
@@ -46,7 +46,7 @@ class Communication(object):
                 urllib2.HTTPError
         """
 
-        server_request = urllib2.urlopen(
+        server_request = urllib.request.urlopen(
             self.url,
             request.get_request(),
             self.timeout
@@ -56,7 +56,7 @@ class Communication(object):
 
             server_response = server_request.read()
 
-        except urllib2.HTTPError as e:
+        except urllib.error.HTTPError as e:
 
             # Return the exception to the caller on HTTPerrors
 

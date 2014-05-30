@@ -1,7 +1,7 @@
 """ Python-Zimbra test suite
 """
 
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
 
 
 def get_config():
