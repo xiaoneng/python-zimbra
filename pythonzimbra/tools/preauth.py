@@ -23,14 +23,16 @@ def create_preauth(byval, key, by='name', expires=0, timestamp=None):
     if timestamp is None:
         timestamp = int(datetime.now().strftime("%s")) * 1000
 
+    message = '%s|%s|%s|%s' % (
+        byval,
+        by,
+        expires,
+        timestamp
+    )
+
     pak = hmac.new(
         key.encode(),
-        '%s|%s|%s|%s' % (
-            byval,
-            by,
-            expires,
-            timestamp
-        ),
+        message.encode(),
         hashlib.sha1
     ).hexdigest()
 
