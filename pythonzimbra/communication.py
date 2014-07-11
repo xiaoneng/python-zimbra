@@ -70,4 +70,4 @@ class Communication(object):
 
         # Find the response for
 
-        response.set_response(server_response)
+        response.set_response(server_response.encode('utf-8'))
