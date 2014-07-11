@@ -12,7 +12,7 @@ from pythonzimbra.response_xml import ResponseXml
 from pythonzimbra.tools import preauth
 
 
-def authenticate(url, account, key, by='name', expires=0, timestamp=None,
+def authenticate(url, cert, account, key, by='name', expires=0, timestamp=None,
                  timeout=None, request_type="xml", admin_auth=False,
                  use_password=False):
 
@@ -89,7 +89,7 @@ def authenticate(url, account, key, by='name', expires=0, timestamp=None,
         ns
     )
 
-    server = Communication(url, timeout)
+    server = Communication(url, cert, timeout)
 
     if request_type == 'xml':
 

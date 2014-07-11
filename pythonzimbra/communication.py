@@ -1,6 +1,6 @@
 """ Zimbra communication handler. """
 
-import urllib2
+import requests
 
 
 class Communication(object):
@@ -8,7 +8,7 @@ class Communication(object):
     """ Zimbra communication handler.
 
     Sends requests to the zimbra SOAP server and returns the responses in a
-    dictionary.
+/   dictionary.
 
     """
 
@@ -20,13 +20,14 @@ class Communication(object):
 
     """ Timeout of the request """
 
-    def __init__(self, url, timeout=None):
+    def __init__(self, url, cert, timeout=None):
 
         """ Initialize the communication handler.
         """
 
         self.url = url
         self.timeout = timeout
+        self.cert = cert
 
     def send_request(self, request, response):
 
@@ -46,17 +47,22 @@ class Communication(object):
                 urllib2.HTTPError
         """
 
-        server_request = urllib2.urlopen(
-            self.url,
-            request.get_request(),
-            self.timeout
-        )
+        #server_request = urllib2.urlopen(
+        #    self.url,
+        #    request.get_request(),
+        #    self.timeout
+        #)
+
+        server_request = requests.post(self.url, data=request.get_request(),
+                            #headers=request.headers, cert=self.cert,
+                            cert=self.cert,
+                            verify=False)
 
         try:
 
-            server_response = server_request.read()
+            server_response = server_request.content.decode('utf-8')
 
-        except urllib2.HTTPError as e:
+        except requests.HTTPError as e:
 
             # Return the exception to the caller on HTTPerrors
 
